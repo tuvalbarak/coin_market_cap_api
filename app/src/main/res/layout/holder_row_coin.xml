@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/common_small_margin"
+    android:paddingBottom="@dimen/common_small_margin"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/holder_row_coin_main_view">
+
+        <TextView
+            android:id="@+id/holder_row_coin_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/large_text_size"
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_num_market_pairs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text_size"
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_last_updated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/holder_row_coin_symbol"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/hint_color"
+            android:layout_marginTop="@dimen/common_small_margin"
+            android:textSize="@dimen/large_text_size"
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_max_supply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/hint_color"
+            android:layout_marginTop="@dimen/common_small_margin"
+            android:textSize="@dimen/large_text_size"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/holder_row_coin_sub_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/holder_row_coin_main_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/holder_row_coin_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/large_text_size"
+            android:text="@string/name_title"
+            android:layout_marginTop="@dimen/common_medium_margin"
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_price_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/large_text_size"
+            android:text="@string/price_title"
+            android:layout_marginTop="@dimen/common_medium_margin"
+
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_name_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/holder_row_coin_name_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text_size"
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_price_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/holder_row_coin_price_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text_size"
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_market_cap_dominance_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/holder_row_coin_name_value"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/large_text_size"
+            android:layout_marginTop="@dimen/common_medium_margin"
+            android:text="@string/market_cap_dominance_title"
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_volume_24h_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/holder_row_coin_price_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/hint_color"
+            android:textSize="@dimen/large_text_size"
+            android:layout_marginTop="@dimen/common_medium_margin"
+            android:text="@string/volume_24h_title"
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_market_cap_dominance_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/holder_row_coin_market_cap_dominance_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text_size"
+            />
+
+        <TextView
+            android:id="@+id/holder_row_coin_volume_24h_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/holder_row_coin_volume_24h_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text_size"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/common_small_margin">
+
+    <ImageView
+        android:id="@+id/fragment_coins_list_iv_hamburger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_menu_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/common_large_margin"
+        />
+
+    <TextView
+        android:id="@+id/fragment_coins_list_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_page_title"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_iv_hamburger"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/common_medium_margin"
+        android:textStyle="bold"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/large_text_size"
+        />
+
+    <TextView
+        android:id="@+id/fragment_coins_list_tv_from_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_page_from"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/common_small_margin"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/large_text_size"
+        />
+
+    <TextView
+        android:id="@+id/fragment_coins_list_tv_to_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_page_to"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_tv_title"
+        app:layout_constraintStart_toStartOf="@id/fragment_coins_list_tv_to_date"
+        android:layout_marginTop="@dimen/common_small_margin"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/large_text_size"
+        />
+
+    <TextView
+        android:id="@+id/fragment_coins_list_tv_from_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_page_demo_from_date"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_tv_from_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/large_text_size"
+        />
+
+    <TextView
+        android:id="@+id/fragment_coins_list_tv_to_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_page_demo_to_date"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_tv_to_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/large_text_size"
+        />
+
+    <ImageView
+        android:id="@+id/fragment_coins_list_iv_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_cloud_upload_24"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_tv_from_date"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/common_medium_margin"
+        />
+
+    <ImageView
+        android:id="@+id/fragment_coins_list_iv_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_refresh_24"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_tv_from_date"
+        app:layout_constraintStart_toEndOf="@id/fragment_coins_list_iv_upload"
+        android:layout_marginStart="@dimen/common_large_margin"
+        android:layout_marginTop="@dimen/common_medium_margin"
+        />
+
+    <ImageView
+        android:id="@+id/fragment_coins_list_iv_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_filter_list_24"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_tv_from_date"
+        app:layout_constraintStart_toEndOf="@id/fragment_coins_list_iv_refresh"
+        android:layout_marginStart="@dimen/common_large_margin"
+        android:layout_marginTop="@dimen/common_medium_margin"
+        />
+
+    <TextView
+        android:id="@+id/fragment_coins_list_tv_empty_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_iv_upload"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/common_medium_margin"
+        android:text="@string/empty_list"
+        android:textColor="@color/black"
+        android:textSize="@dimen/common_medium_margin"
+        android:visibility="gone"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_coins_list_rv_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_medium_margin"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/fragment_coins_list_iv_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ProgressBar
+        android:id="@+id/fragment_coins_list_pb_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:indeterminateTint="@color/primary_color"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fragment_coins_list_fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_medium_margin"
+        android:layout_marginEnd="@dimen/common_medium_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/primary_color"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        android:layout_gravity="end|bottom"
+        app:tint="@android:color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
